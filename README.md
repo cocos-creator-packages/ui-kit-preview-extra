@@ -1,2 +1,2 @@
-# ui-kit-preview-extra
-ui-kit preview extra
+# fire-ui-kit
+Advanced ui controls for fireball

@@ -69,6 +69,7 @@ Editor.Panel.extend({
     <div class="toolbar">
       <ui-select id="select">
         <option value="asset">ui-asset</option>
+        <option value="node">ui-node</option>
       </ui-select>
       <span>Ctrl/Cmd + F: show current focus</span>
     </div>

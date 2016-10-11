@@ -100,19 +100,19 @@ Editor.Panel.extend({
     this.$.select.addEventListener('confirm', event => {
       let value = event.target.value;
 
-      this.profiles.local.scrollTop = 0;
-      this.profiles.local.select = value;
+      this.profiles.local.data.scrollTop = 0;
+      this.profiles.local.data.select = value;
       this.profiles.local.save();
 
       this.showPreview(value);
     });
 
-    this.$.select.value = this.profiles.local.select;
-    this.showPreview(this.profiles.local.select);
+    this.$.select.value = this.profiles.local.data.select;
+    this.showPreview(this.profiles.local.data.select);
   },
 
   close () {
-    this.profiles.local.scrollTop = this.$.view.scrollTop;
+    this.profiles.local.data.scrollTop = this.$.view.scrollTop;
     this.profiles.local.save();
   },
 
@@ -122,7 +122,7 @@ Editor.Panel.extend({
       .then(initFn => {
         initFn(this);
         setTimeout(() => {
-          this.$.view.scrollTop = this.profiles.local.scrollTop;
+          this.$.view.scrollTop = this.profiles.local.data.scrollTop;
         }, 10);
       });
   },
